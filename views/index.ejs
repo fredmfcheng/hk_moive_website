@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>王家衛風: 頭文字D</title>
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=Noto+Serif+HK:wght@200..900&family=Noto+Serif+TC:wght@600&family=Zilla+Slab&display=swap" rel="stylesheet">
+  </head>
+
+<body>
+  <h1>如果...用王家衛風格去拍頭文字D </h1>
+
+  <form action="/character" method="POST" class="buttons">
+    <button type="submit" value="tonyLeung" name="choice"><img src="/images/tl.gif" alt="Tony Leung" style="height: 1.5em; vertical-align: middle;"></button>
+    <button type="submit" value="leslieCheung" name="choice"><img src="/images/lc.gif" alt="Leslie Cheung" style="height: 1.5em; vertical-align: middle;"></button>
+    <button type="submit" value="takeshiKaneshiro" name="choice"><img src="/images/tk.gif" alt="Takeshi Kaneshiro" style="height: 1.5em; vertical-align: middle;"></button>
+  </form>
+  <div id="recipeContainer" class="hidden">
+    <% if (locals.data){ %>
+      <h2><%= data.character_name %></h2>
+      <h3></h3>
+      <ul id="ingredientsList">
+        <li>演員: <%= data.actor_name %></li>
+        <li>台詞: <%= data.quotes %></li>
+      </ul>
+    <% }else{ %>
+    <h2>點選角色繼續... 👆</h2>
+      <% } %>
+      
+
+
+
+
+  </div>
+</body>
+
+</html>
